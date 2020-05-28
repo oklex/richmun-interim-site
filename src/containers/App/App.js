@@ -9,6 +9,7 @@ const fullLogo = "FullLogo.svg";
 const fullLogoBlack = "FullLogo-black.svg";
 
 class App extends React.Component {
+	// add switch to redirect to home instead of an error page
 	render() {
 		return (
 			<Router>
