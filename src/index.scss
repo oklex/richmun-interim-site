@@ -1,0 +1,97 @@
+@import "./colours.scss";
+
+body {
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	h1 {
+		font-family: "Josefin Sans", sans-serif;
+		font-weight: 700;
+		font-size: 30pt;
+		line-height: 1.5em;
+	}
+	h2 {
+		font-family: "Josefin Sans", sans-serif;
+		font-weight: 700;
+		font-size: 25pt;
+		line-height: 1.5em;
+	}
+	h3 {
+		font-family: "Josefin Sans", sans-serif;
+		font-weight: 700;
+		font-size: 18pt;
+		line-height: 1.5em;
+	}
+	p {
+		font-family: "Raleway", sans-serif;
+		font-size: 14pt;
+		line-height: 1.5em;
+	}
+	a {
+		font-family: "Raleway", sans-serif;
+		font-size: 14pt;
+		text-decoration: none;
+		font-weight: 700;
+		color: $BrandDark;
+	}
+	a:hover {
+		text-decoration: none;
+		color: $BrandDark;
+	}
+	.btn:hover {
+		text-decoration: none;
+		color: $DarkAccent;
+	}
+	.linkBtn {
+		border: solid 1px white;
+		padding: 15px 15px 0px 15px;
+		transition: 0.1s;
+		color: grey;
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+	.btn-active {
+		p {
+			color: $BrandDark !important;
+			font-weight: 700;
+		}
+	}
+	.btn-active:hover {
+		p {
+			color: $DarkAccent !important;
+			font-weight: 700;
+		}
+	}
+	.linkBtn:hover {
+		border: solid 1px $LightGrey;
+	}
+	.miniText {
+		font-family: "Raleway", sans-serif;
+		font-size: 9pt;
+		line-height: 1.5em;
+	}
+	.greyText {
+		color: $DarkGrey;
+	}
+	.brandText {
+		color: $BrandDark;
+	}
+	.copyright {
+		font-size: 9pt;
+		color: $DarkGrey;
+		position: fixed;
+		bottom: 15px;
+	}
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+@media only screen and (max-width: 800px) {
+	.linkBtn {
+		width: 100%;
+	}
+}
