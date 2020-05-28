@@ -1,8 +1,4 @@
-$DarkGrey: #404040;
-$LightGrey: #D9D9D9;
-$DarkAccent: #377376;
-$BrandDark: #4B969B;
-$BrandLight: #6dbfc2;
+@import "./colours.scss";
 
 body {
 	margin: 0;
@@ -32,16 +28,60 @@ body {
 		font-size: 14pt;
 		line-height: 1.5em;
 	}
+	a {
+		font-family: "Raleway", sans-serif;
+		font-size: 14pt;
+		text-decoration: none;
+		font-weight: 700;
+		color: $BrandDark;
+	}
+	a:hover {
+		text-decoration: none;
+		color: $BrandDark;
+	}
+	.btn:hover {
+		text-decoration: none;
+		color: $DarkAccent;
+	}
+	.linkBtn {
+		border: solid 1px white;
+		padding: 15px 15px 0px 15px;
+		transition: 0.1s;
+		color: grey;
+		margin-left: 35px;
+		margin-right: 35px;
+	}
+	.btn-active {
+		p {
+			color: $BrandDark !important;
+			font-weight: 700;
+		}
+	}
+	.btn-active:hover {
+		p {
+			color: $DarkAccent !important;
+			font-weight: 700;
+		}
+	}
+	.linkBtn:hover {
+		border: solid 1px $LightGrey;
+	}
 	.miniText {
 		font-family: "Raleway", sans-serif;
 		font-size: 9pt;
 		line-height: 1.5em;
 	}
 	.greyText {
-		color:$DarkGrey;
+		color: $DarkGrey;
 	}
 	.brandText {
 		color: $BrandDark;
+	}
+	.copyright {
+		font-size: 9pt;
+		color: $DarkGrey;
+		position: fixed;
+		bottom: 15px;
 	}
 }
 
