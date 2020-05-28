@@ -44,7 +44,7 @@ export default class DynamicLogo extends Component {
             return <img src={fullLogo} className="App-logo" alt="logo" />
         } else {
             return <div>
-				<img src={logo} className="App-logo" alt="logo text" /><br/>
+				<img src={logo} className="App-logo" alt="logo icon" /><br/>
 				<img src={textOnly} className="App-logo logo-text-only" alt="logo text" />
 			</div>
         }
