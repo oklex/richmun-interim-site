@@ -1,0 +1,1 @@
+start: npm run install-all && npm run web-build && npm run api-build && npm start
