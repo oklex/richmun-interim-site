@@ -1,0 +1,53 @@
+@import "../../colours.scss";
+
+.transitionScreen {
+	background-color: $BrandDark;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	animation: slidein ease-out 0.3s;
+	p {
+		margin-top: 50vh;
+		color: white !important;
+		align-items: center;
+	}
+}
+
+.transitionScreen-follow {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	animation: followSlideIn ease-out 0.9s;
+	// animation-delay: 0.3s;
+}
+
+@keyframes slidein {
+	from {
+		margin-top: 100%;
+	}
+
+	to {
+		margin-top: 0%;
+	}
+}
+
+@keyframes followSlideIn {
+	0% {
+		// margin-top: 100%;
+		top: 100vh;
+	}
+	50% {
+		// margin-top: 100%;
+		top: 100vh;
+	}
+	100% {
+		top: 0vh;
+		margin-top: 0%;
+	}
+}
+

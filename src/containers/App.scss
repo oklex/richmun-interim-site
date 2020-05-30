@@ -32,27 +32,3 @@
 .Links {
 	margin-top: 10vh;
 }
-
-.transitionScreen {
-	background-color:$BrandDark;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	animation: slidein ease-out 0.3s;
-	p {
-		margin-top: 50vh;
-		color: white;
-		align-items: center;
-	}
-}
-
-
-@keyframes slidein {
-	from {
-	  margin-top: 100%;
-	}
-  
-	to {
-	  margin-top: 0%;
-	}
-  }

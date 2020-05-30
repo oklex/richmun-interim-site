@@ -5,6 +5,7 @@ import ReactTooltip from "react-tooltip";
 import { withRouter, Redirect } from "react-router-dom";
 import DynamicLogo from "../../components/dynamicLogo";
 import {Helmet} from "react-helmet";
+import RedirectLink from "../../components/RedirectLink/redirectLink";
 
 const upcomingYear = "2021"
 
@@ -45,7 +46,6 @@ class Home extends React.Component {
 					<meta name="robots" content="index, follow" />
 					<meta name="description" content={"Richmond Model United Nations is hiring for " + upcomingYear}></meta>
 				</Helmet>
-				{this.showTransition()}
 				<ReactTooltip place="bottom" type="dark" effect="float" />
 				<div className="App-body">
 					<div className="App-header">
@@ -53,27 +53,17 @@ class Home extends React.Component {
 						<p className="greyText">Coming April 2021</p>
 					</div>
 					<div className="Links container d-flex flex-wrap justify-content-around">
-						<div
-							className="linkBtn btn-active"
-							onClick={() =>
-								this.onClick("https://forms.gle/9Kkv2VukkVNY2HrW6")
-							}
-						>
-							<p data-tip="">Secretariat Apps</p>
-						</div>
+						
+						<RedirectLink link='https://forms.gle/9Kkv2VukkVNY2HrW6' delay='50' externalLink={true}>
+							<p data-tip="">Secretariat Apps</p></RedirectLink>
+						
 						<div
 							className="linkBtn"
-							// onClick={() =>
-							// 	this.onClick("")
-							// }
 						>
 							<p data-tip="not available yet">Staff Apps</p>
 						</div>
 						<div
 							className="linkBtn"
-							// onClick={() =>
-							// 	this.onClick("")
-							// }
 						>
 							<p data-tip="not available yet">Returning Staff</p>
 						</div>

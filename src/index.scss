@@ -48,18 +48,18 @@ body {
 		padding: 15px 15px 0px 15px;
 		transition: 0.1s;
 		color: grey;
-		margin-left: 35px;
-		margin-right: 35px;
+		// margin-left: 35px;
+		// margin-right: 35px;
 	}
 	.btn-active {
 		p {
-			color: $BrandDark !important;
+			color: $BrandDark;
 			font-weight: 700;
 		}
 	}
 	.btn-active:hover {
 		p {
-			color: $DarkAccent !important;
+			color: $DarkAccent;
 			font-weight: 700;
 		}
 	}
