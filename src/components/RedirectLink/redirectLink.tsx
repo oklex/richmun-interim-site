@@ -40,7 +40,7 @@ export default class RedirectLink extends React.Component<
 	};
 
 	redirect = () => {
-		if (this.state.clicked && this.props.externalLink) {
+		if (this.props.externalLink) {
 			console.log("redirect");
 			setTimeout(
 				() => {
