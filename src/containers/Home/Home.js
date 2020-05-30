@@ -1,8 +1,7 @@
 import React from "react";
 import "../App.scss";
-import ParticleBackground from "../../components/particles";
 import ReactTooltip from "react-tooltip";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import DynamicLogo from "../../components/dynamicLogo";
 import {Helmet} from "react-helmet";
 import RedirectLink from "../../components/RedirectLink/redirectLink";
@@ -54,7 +53,7 @@ class Home extends React.Component {
 					</div>
 					<div className="Links container d-flex flex-wrap justify-content-around">
 						
-						<RedirectLink link='https://forms.gle/9Kkv2VukkVNY2HrW6' delay='50' externalLink={true}>
+						<RedirectLink link='/secretariat-applications' delay='1000' externalLink={false}>
 							<p data-tip="">Secretariat Apps</p></RedirectLink>
 						
 						<div
