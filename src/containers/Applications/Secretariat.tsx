@@ -1,6 +1,7 @@
 import React from "react";
 import "./applications.scss";
 import RedirectLink from "../../components/RedirectLink/redirectLink";
+import { Link } from "react-router-dom";
 
 export default function Secretariat() {
 	return (
@@ -168,13 +169,18 @@ export default function Secretariat() {
 							delay={100}
 						>
 							<div>
-								<p>Apply now</p>
+								<p className="whiteTextBtn">Apply now</p>
 							</div>
 						</RedirectLink>
 					</div>
 				</div>
 			</div>
-			<div className="footerLink d-flex flex-row-reverse">
+			<div className="footerLink d-flex justify-content-between">
+				<div className='backBtn'>
+					<Link to="/">
+				<p className="whiteTextBtn"><strong>Home</strong></p>
+					</Link>
+				</div>
 				<div className="applyBox">
 					<RedirectLink
 						link="https://forms.gle/9Kkv2VukkVNY2HrW6"
@@ -182,7 +188,7 @@ export default function Secretariat() {
 						delay={100}
 					>
 						<div>
-							<p>Apply now</p>
+							<p className="whiteTextBtn">Apply now</p>
 						</div>
 					</RedirectLink>
 				</div>

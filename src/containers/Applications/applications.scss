@@ -20,12 +20,6 @@
 	// animation-delay: 0.5s;
 	.applyBox {
 		background-color: $BrandDark;
-		p {
-			margin-top: 1em;
-			margin-bottom: 1em;
-			margin-left: 35px;
-			color: white !important;
-		}
 		.linkBtn {
 			border: none;
 			padding: 0px;
@@ -40,12 +34,6 @@
 }
 .applyBox {
 	background-color: $BrandDark;
-	p {
-		margin-top: 1em;
-		margin-bottom: 1em;
-		margin-left: 35px;
-		color: white !important;
-	}
 	.linkBtn {
 		border: none;
 		padding: 0px;
@@ -56,6 +44,19 @@
 	.linkBtn:hover {
 		border: none;
 		color: white;
+	}
+}
+
+.whiteTextBtn {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 35px;
+	color: white !important;
+}
+
+.backBtn {
+	a:hover {
+		text-decoration: none !important;
 	}
 }
 
