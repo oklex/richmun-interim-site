@@ -60,8 +60,8 @@ export default class RedirectLink extends React.Component<
 		}
 	};
 
-	showRedirect = () => {
-		if (this.state.clicked && this.state.delayEnded) {
+	showInternalRedirect = () => {
+		if (!this.props.externalLink && this.state.clicked && this.state.delayEnded) {
 			return <Redirect to={this.props.link} />;
 		}
 	};
@@ -91,7 +91,7 @@ export default class RedirectLink extends React.Component<
 	render() {
 		return (
 			<div>
-				{this.showRedirect()}
+				{this.showInternalRedirect()}
 				{this.showTransition()}
 				<div className="linkBtn btn-active" onClick={() => this.onClick()}>
 					{this.props.children}
