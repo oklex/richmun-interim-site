@@ -13,7 +13,7 @@ app.use(cors());
 app.use(body_parser_1.default.urlencoded({
     extended: true,
 }));
-const webBuild = "../../web/build";
+const webBuild = "../web-build";
 app.use("/", express_1.default.static(path_1.default.join(__dirname, webBuild)));
 app.get("/*", function (req, res) {
     res.sendFile(path_1.default.join(__dirname, webBuild, "index.html"));
