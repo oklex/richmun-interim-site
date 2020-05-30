@@ -1,0 +1,91 @@
+@import "../../colours.scss";
+
+.applicationsPage {
+	margin-top: 40vh;
+	margin-bottom: 40vh;
+	animation: fade-in 0.5s;
+	.title {
+		padding-bottom: 30px;
+	}
+}
+.footerLink {
+	z-index: 999999;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	height: 3em;
+	width: 100vw;
+	background-color: $BrandLight;
+	// animation: slide-down 0.2s ease-in-out;
+	// animation-delay: 0.5s;
+	.applyBox {
+		background-color: $BrandDark;
+		p {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			margin-left: 35px;
+			color: white !important;
+		}
+		.linkBtn {
+			border: none;
+			padding: 0px;
+			padding-right: 50px;
+			color: white;
+		}
+		.linkBtn:hover {
+			border: none;
+			color: white;
+		}
+	}
+}
+.applyBox {
+	background-color: $BrandDark;
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 35px;
+		color: white !important;
+	}
+	.linkBtn {
+		border: none;
+		padding: 0px;
+		padding-right: 50px;
+		padding-bottom: 15px;
+		color: white;
+	}
+	.linkBtn:hover {
+		border: none;
+		color: white;
+	}
+}
+
+.shortContainer {
+	max-width: 720px;
+}
+
+.pill-title {
+	padding: 10px;
+	// outline: solid 0.5px $LightGrey;
+	margin-bottom: 20px;
+}
+.tab-content {
+	margin-top: 30px;
+	margin-left: 15px;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+@keyframes slide-down {
+	0% {
+		margin-bottom: 0%;
+	}
+	100% {
+		margin-bottom: 100%;
+	}
+}
