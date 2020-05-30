@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build-linux && node dist/index.js",
+    "start": "npm i && (npm run web-build) && npm run build-linux && node dist/index.js",
+    "serve": "npm run build-linux && node dist/index.js",
     "build-windows": "rimraf dist && npm run build-ts",
     "build-linux": "rm -rf dist && npm run build-ts",
-    "build-web": "cd web && npm run build",
+    "build-web": "cd web && npm i && npm run build",
     "build-ts": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
