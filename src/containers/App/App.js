@@ -1,7 +1,8 @@
 import React from "react";
 import "../App.scss";
-import { withRouter, BrowserRouter as Router } from "react-router-dom";
+import {  Switch, Route, Redirect, BrowserRouter as Router } from "react-router-dom";
 import Home from '../Home/Home'
+import Secretariat from '../Applications/Secretariat'
 // import helmet from 'react-helmet'
 
 const logo = "Logo.svg";
@@ -13,7 +14,14 @@ class App extends React.Component {
 	render() {
 		return (
 			<Router>
-				<Home/>
+				<Switch>
+					<Route exact path='/'><Home/></Route>
+					<Route exact path='/Secretariat-Applications'>
+						<Secretariat/>
+					</Route>
+					{/* <Route render={() => <Redirect to={{pathname: "/"}} />} /> */}
+				</Switch>
+				
 			</Router>
 		);
 	}
