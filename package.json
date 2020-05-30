@@ -1,0 +1,22 @@
+{
+  "name": "richmun-site",
+  "version": "1.0.0",
+  "description": "richmun-website",
+  "scripts": {
+    "web-build": "cd web && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "api-build": "cd api && npm install && npm run build-linux",
+    "install-all": "(cd web && npm install) && (cd ../api && npm install)",
+    "start": "cd api && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oklex/richmun-site.git"
+  },
+  "author": "Alexander Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oklex/richmun-site/issues"
+  },
+  "homepage": "https://github.com/oklex/richmun-site#readme"
+}
