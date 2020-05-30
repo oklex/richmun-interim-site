@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.scss";
 import ReactTooltip from "react-tooltip";
-import { withRouter } from "react-router-dom";
 import DynamicLogo from "../../components/dynamicLogo";
 import {Helmet} from "react-helmet";
 import RedirectLink from "../../components/RedirectLink/redirectLink";
@@ -79,4 +78,4 @@ class Home extends React.Component<{},IHomeState>{
 	}
 }
 
-export default withRouter(Home);
+export default (Home);
