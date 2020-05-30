@@ -1,6 +1,5 @@
 import React from "react";
 import "./RedirectLink.scss";
-import { Redirect } from 'react-router-dom'
 
 interface IRedirectLinkProps {
 	link: string;
@@ -23,32 +22,44 @@ export default class RedirectLink extends React.Component<
 
 	onClick = () => {
 		console.log("clicked ", this.props.link);
+		window.scrollTo(0, 0)
 		this.setState({
 			clicked: true,
 		});
+		// setTimeout(
+		// 	() =>
+		// 		this.setState({
+		// 			clicked: false,
+		// 		}),
+		// 	this.props.delay ? (this.props.delay + 150) : 50
+		// )
 	};
 
 	redirect = () => {
-		if (this.state.clicked && this.props.externalLink) {
-			console.log('external redirect')
+		if (this.state.clicked /* && this.props.externalLink*/) {
+			console.log("redirect");
 			setTimeout(
 				() => {
 					window.location.href = this.props.link;
 				},
 				this.props.delay ? this.props.delay : 0
 			);
-		} else if (this.state.clicked){
-			console.log('internal redirect')
-			return <Redirect to={this.props.link} />
 		}
-	}
+
+		// else if (this.state.clicked && this.state.delayEnded) {
+		// 	console.log("internal redirect");
+		// 	return <Redirect to={this.props.link} />;
+		// }
+	};
 
 	showTransition = () => {
 		if (this.state.clicked && this.props.externalLink) {
 			console.log("show external transition");
 			return (
 				<div className="transitionScreen">
-					<p>redirecting...</p>
+					<div>
+						<p>redirecting...</p>
+					</div>
 				</div>
 			);
 		} else if (this.state.clicked) {

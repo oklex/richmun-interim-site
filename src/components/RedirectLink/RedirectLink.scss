@@ -1,6 +1,7 @@
 @import "../../colours.scss";
 
 .transitionScreen {
+	z-index: 99999999;
 	background-color: $BrandDark;
 	position: absolute;
 	top: 0;
@@ -8,14 +9,18 @@
 	width: 100vw;
 	height: 100vh;
 	animation: slidein ease-out 0.3s;
-	p {
-		margin-top: 50vh;
-		color: white !important;
-		align-items: center;
+	div {
+		width: 100%;
+		margin-top: 50vh !important;
+		text-align: center;
+		p {
+			color: white !important;
+		}
 	}
 }
 
 .transitionScreen-follow {
+	z-index: 999999999;
 	background-color: white;
 	position: absolute;
 	top: 0;
@@ -50,4 +55,3 @@
 		margin-top: 0%;
 	}
 }
-
