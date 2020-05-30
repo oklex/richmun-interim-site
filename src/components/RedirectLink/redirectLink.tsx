@@ -29,7 +29,7 @@ export default class RedirectLink extends React.Component<
 	};
 
 	redirect = () => {
-		if (this.props.externalLink) {
+		if (this.state.clicked && this.props.externalLink) {
 			console.log('external redirect')
 			setTimeout(
 				() => {
@@ -37,7 +37,7 @@ export default class RedirectLink extends React.Component<
 				},
 				this.props.delay ? this.props.delay : 0
 			);
-		} else {
+		} else if (this.state.clicked){
 			console.log('internal redirect')
 			return <Redirect to={this.props.link} />
 		}
