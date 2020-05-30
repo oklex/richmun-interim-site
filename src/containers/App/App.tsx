@@ -18,7 +18,7 @@ class App extends React.Component {
 					<Route exact path="/">
 						<Home />
 					</Route>
-					<Route exact path="/Secretariat-Applications">
+					<Route path="/sec-apps">
 						<Secretariat />
 					</Route>
 					{/* <Route render={() => <Redirect to={{pathname: "/"}} />} /> */}

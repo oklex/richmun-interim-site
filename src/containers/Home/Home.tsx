@@ -57,7 +57,7 @@ class Home extends React.Component<{},IHomeState>{
 					</div>
 					<div className="Links container d-flex flex-wrap justify-content-around">
 						
-						<RedirectLink link='/secretariat-applications' delay={1000} externalLink={false}>
+						<RedirectLink link='/sec-apps' delay={1000} externalLink={false}>
 							<p data-tip="">Secretariat Apps</p></RedirectLink>
 						
 						<div

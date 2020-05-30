@@ -1,5 +1,6 @@
 import React from "react";
 import "./RedirectLink.scss";
+import { Redirect } from "react-router-dom";
 
 interface IRedirectLinkProps {
 	link: string;
@@ -10,6 +11,7 @@ interface IRedirectLinkProps {
 
 interface IRedirectLinkState {
 	clicked: boolean;
+	delayEnded: boolean;
 }
 
 export default class RedirectLink extends React.Component<
@@ -18,11 +20,12 @@ export default class RedirectLink extends React.Component<
 > {
 	state = {
 		clicked: false,
+		delayEnded: false,
 	};
 
 	onClick = () => {
 		console.log("clicked ", this.props.link);
-		window.scrollTo(0, 0)
+		window.scrollTo(0, 0);
 		this.setState({
 			clicked: true,
 		});
@@ -33,10 +36,11 @@ export default class RedirectLink extends React.Component<
 		// 		}),
 		// 	this.props.delay ? (this.props.delay + 150) : 50
 		// )
+		this.redirect();
 	};
 
 	redirect = () => {
-		if (this.state.clicked /* && this.props.externalLink*/) {
+		if (this.state.clicked && this.props.externalLink) {
 			console.log("redirect");
 			setTimeout(
 				() => {
@@ -44,12 +48,22 @@ export default class RedirectLink extends React.Component<
 				},
 				this.props.delay ? this.props.delay : 0
 			);
+		} else {
+			setTimeout(
+				() => {
+					this.setState({
+						delayEnded: true,
+					});
+				},
+				this.props.delay ? this.props.delay : 0
+			);
 		}
+	};
 
-		// else if (this.state.clicked && this.state.delayEnded) {
-		// 	console.log("internal redirect");
-		// 	return <Redirect to={this.props.link} />;
-		// }
+	showRedirect = () => {
+		if (this.state.clicked && this.state.delayEnded) {
+			return <Redirect to={this.props.link} />;
+		}
 	};
 
 	showTransition = () => {
@@ -77,7 +91,7 @@ export default class RedirectLink extends React.Component<
 	render() {
 		return (
 			<div>
-				{this.redirect()}
+				{this.showRedirect()}
 				{this.showTransition()}
 				<div className="linkBtn btn-active" onClick={() => this.onClick()}>
 					{this.props.children}
