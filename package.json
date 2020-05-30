@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "richmun-website",
   "scripts": {
-    "web-build": "cd web && npm install && npm install && npm run build",
+    "web-build": "cd web && npm install && npm run build",
     "api-build": "cd api && npm install && npm run build-linux",
     "install-all": "(cd web && npm install) && (cd ../api && npm install)",
-    "start": "(npm run install-all) && (npm run web-build) && (cd api && npm run start)",
+    "start": "npm run web-build && (cd api && npm run start)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
