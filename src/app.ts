@@ -15,7 +15,7 @@ app.use(
 	})
 );
 
-const webBuild: string = "../web-build";
+const webBuild: string = "../web/build";
 app.use("/", express.static(path.join(__dirname, webBuild)));
 app.get("/*", function (req, res) {
 	res.sendFile(path.join(__dirname, webBuild, "index.html"));

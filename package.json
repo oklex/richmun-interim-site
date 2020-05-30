@@ -1,22 +1,28 @@
 {
-  "name": "richmun-site",
+  "name": "richmun-api",
   "version": "1.0.0",
-  "description": "richmun-website",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "web-build": "cd web && npm install && npm run build",
-    "api-build": "cd api && npm install && npm run build-linux",
-    "install-all": "(cd web && npm install) && (cd ../api && npm install)",
-    "start": "cd api && npm run start",
+    "start": "npm run build-linux && node dist/index.js",
+    "build-windows": "rimraf dist && npm run build-ts",
+    "build-linux": "rm -rf dist && npm run build-ts",
+    "build-web": "cd web && npm run build",
+    "build-ts": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oklex/richmun-site.git"
-  },
-  "author": "Alexander Kim",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oklex/richmun-site/issues"
-  },
-  "homepage": "https://github.com/oklex/richmun-site#readme"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3",
+    "@types/node": "^14.0.6",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.6"
+  }
 }
