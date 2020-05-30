@@ -6,21 +6,26 @@ import DynamicLogo from "../../components/dynamicLogo";
 import {Helmet} from "react-helmet";
 import RedirectLink from "../../components/RedirectLink/redirectLink";
 
-const upcomingYear = "2021"
+const upcomingYear:string = "2021"
 
-class Home extends React.Component {
+interface IHomeState {
+	clickedLink: boolean,
+	link: string
+}
+
+class Home extends React.Component<{},IHomeState>{
 	state = {
 		clickedLink: false,
 		link: "",
 	};
 
-	onClick = (link) => {
+	onClick = (link:string) => {
 		console.log("clicked ", link);
 		this.setState({
 			clickedLink: true,
 		});
 		setTimeout(() => {
-			window.location = link;
+			window.location.href = link;
 		}, 50);
 	};
 
@@ -53,7 +58,7 @@ class Home extends React.Component {
 					</div>
 					<div className="Links container d-flex flex-wrap justify-content-around">
 						
-						<RedirectLink link='/secretariat-applications' delay='1000' externalLink={false}>
+						<RedirectLink link='/secretariat-applications' delay={1000} externalLink={false}>
 							<p data-tip="">Secretariat Apps</p></RedirectLink>
 						
 						<div
