@@ -71,7 +71,7 @@ class Home extends React.Component<{},IHomeState>{
 							<p data-tip="not available yet">Returning Staff</p>
 						</div>
 					</div>
-					<div className="copyright">updated: 05-29-2020  |  copyright@richmun2020</div>
+					<div className="copyright">updated: 06-01-2020  |  copyright@richmun2020</div>
 				</div>
 			</div>
 		);
