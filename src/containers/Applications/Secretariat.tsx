@@ -45,25 +45,25 @@ export default function Secretariat() {
 			<h2>Application Information</h2>
 			<p>
 				1. You will be allowed to save and edit your application at any point
-				within the form. However, if your application is not "complete" by the
+				within the form. However, if you do not mark your application as "COMPLETE" by the
 				deadline, it will not be considered.
-			</p>
+			</p> <br/>
 			<p>
 				2. You will also be allowed to apply for multiple positions at once -
 				please review the available positions below.
-			</p>
+			</p><br/>
 			<p>
 				3. Your appeal as an potential secretariat is measured by what you are
 				capable of and how you can benefit your team (similarly, harmful
 				leadership practices will reduce your appeal).
-			</p>
+			</p><br/>
 			<p>
 				4. We are ultimately an educational organization and care about
 				providing opportunities. If two applicants are deemed to be equally
 				viable candidates, we give slight preference to applicants with less
 				experience. To keep your application competitive, try to emphasize the
 				skills and growth from past experiences.
-			</p>
+			</p><br/>
 			<p>
 				5. While we do our best to evaluate you fairly and reasonably, we’re
 				generally cautious when hiring, and it is your responsibility to put
