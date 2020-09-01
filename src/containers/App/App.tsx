@@ -3,6 +3,7 @@ import "../App.scss";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Home from "../Home/Home";
 import Secretariat from "../Applications/Secretariat";
+import ReturningStaff from "../ReturningStaff/ReturningStaff";
 // import helmet from 'react-helmet'
 
 // const logo = "Logo.svg";
@@ -20,6 +21,9 @@ class App extends React.Component {
 					</Route>
 					<Route path="/sec-apps">
 						<Secretariat />
+					</Route>
+					<Route exact path="/returning-staff">
+						<ReturningStaff/>
 					</Route>
 					{/* <Route render={() => <Redirect to={{pathname: "/"}} />} /> */}
 				</Switch>
