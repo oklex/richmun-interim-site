@@ -65,11 +65,13 @@ class Home extends React.Component<{},IHomeState>{
 						>
 							<p data-tip="not available yet">Staff Apps</p>
 						</div>
-						<div
+						{/* <div
 							className="linkBtn"
 						>
 							<p data-tip="not available yet">Returning Staff</p>
-						</div>
+						</div> */}
+						<RedirectLink link='/returning-staff' delay={1000} externalLink={false}>
+							<p data-tip="">Returning Staff</p></RedirectLink>
 					</div>
 					<div className="copyright">updated: 06-01-2020  |  copyright@richmun2020</div>
 				</div>
