@@ -1,0 +1,23 @@
+.retStaffPage {
+    padding-top: 30vh;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
